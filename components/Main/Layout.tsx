@@ -2,7 +2,6 @@ import { Container } from "@material-ui/core";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-import styles from "../styles/Layout.module.css";
 
 const Layout = ({
   children,
@@ -29,8 +28,8 @@ const Layout = ({
 };
 
 Layout.defaultProps = {
-  title: "Next.js | my website",
-  description: "page description",
+  title: "Aero Rewards",
+  description: "Aero Rewards",
 };
 
 export default Layout;

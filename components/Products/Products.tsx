@@ -1,4 +1,5 @@
 import { Container, Grid } from "@material-ui/core";
+import Head from "next/head";
 import React from "react";
 import Card from "./Card";
 import { IProduct } from "./types";
@@ -9,10 +10,15 @@ const Products = ({ products }: { products: IProduct[] }) => {
   });
 
   return (
-    <Grid container spacing={4} id="products">
-      {products &&
-        products.map((product) => <Card product={product} key={product._id} />)}
-    </Grid>
+    <div>
+      <h1>TECH PRODUCTS</h1>
+      <Grid container spacing={4} id="products">
+        {products &&
+          products.map((product) => (
+            <Card product={product} key={product._id} />
+          ))}
+      </Grid>
+    </div>
   );
 };
 
