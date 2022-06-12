@@ -1,22 +1,18 @@
-import { Container } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import React from "react";
 import Card from "./Card";
+import { IProduct } from "./types";
 
-const Products = ({ products }: { products: any[] }) => {
+const Products = ({ products }: { products: IProduct[] }) => {
   products = products.sort((a, b) => {
     return b.cost - a.cost;
   });
 
   return (
-    <div id="products">
-      <Container>
-        {products &&
-          products.length > 0 &&
-          products.map((product) => (
-            <Card product={product} key={product._id} />
-          ))}
-      </Container>
-    </div>
+    <Grid container spacing={4} id="products">
+      {products &&
+        products.map((product) => <Card product={product} key={product._id} />)}
+    </Grid>
   );
 };
 

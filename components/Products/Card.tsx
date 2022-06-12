@@ -1,11 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
+import { IProduct } from "./types";
 
-const Card = ({ product }: { product: any }) => {
+const Card = ({ product }: { product: IProduct }) => {
   const { _id: id, name, img, cost, category } = product;
+
   return (
-    <div style={{ width: "25%", display: "inline-block", padding: "10px" }}>
+    <Grid item xs={12} sm={6} lg={3} xl={2}>
       <article
         key={id}
         style={{
@@ -16,16 +18,16 @@ const Card = ({ product }: { product: any }) => {
         }}
       >
         <div style={{ textAlign: "center" }}>
-          <Image src={img.url} width="200" height="200" alt={name} />
+          <Image src={img.url} alt={name} width="100%" height="100%" />
         </div>
         <hr />
         <div style={{ paddingLeft: "10px" }}>
-          <p>{name}</p>
-          <p>{category}</p>
+          <b>{name}</b>
+          <p style={{ color: "gray" }}>{category}</p>
         </div>
       </article>
       <button className="btn-grad">Redeem for {cost}</button>
-    </div>
+    </Grid>
   );
 };
 
