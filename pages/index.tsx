@@ -3,13 +3,21 @@ import Layout from "../components/Main/Layout";
 import Products from "../components/Products/Products";
 import Hero from "../components/Landing/Hero";
 import api from "../components/Products/api";
+import { ProvideUser } from "../components/User/context";
+import { IProduct } from "../components/Products/types";
 
-const Home: NextPage = ({ products }: { products: any }) => {
+interface Props {
+  products: IProduct[];
+}
+
+const Home: NextPage<Props> = ({ products }) => {
   return (
-    <Layout>
-      <Hero />
-      <Products products={products} />
-    </Layout>
+    <ProvideUser>
+      <Layout>
+        <Hero />
+        <Products products={products} />
+      </Layout>
+    </ProvideUser>
   );
 };
 

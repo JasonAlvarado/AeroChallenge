@@ -14,4 +14,17 @@ export default {
 
     return prods;
   },
+  redeemProduct: async (productId: string): Promise<any> => {
+    return fetch(`${API_URL}/redeem`, {
+      method: "POST",
+      headers: getHeaders(),
+      body: JSON.stringify({ productId: productId }),
+    })
+      .then((res) => {
+        return true;
+      })
+      .catch((err) => {
+        return false;
+      });
+  },
 };

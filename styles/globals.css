@@ -26,23 +26,65 @@ footer {
     #8e54e9 51%,
     #4776e6 100%
   );
-  /* margin: 10px; */
+  font-weight: bold;
   padding: 15px 45px;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
-  box-shadow: 0 0 20px #eee;
+  /* box-shadow: 0 0 20px #eee; */
   border-radius: 10px;
   display: block;
-  width: 100%;
+  border: none;
 }
 
 .btn-grad:hover {
+  font-weight: bold;
   cursor: pointer;
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
-  width: 100%;
+  border: none;
+}
+
+.btn-unavailable {
+  border: none;
+  cursor: not-allowed;
+  background-color: lightgrey;
+  padding: 15px 45px;
+  text-align: center;
+  /* text-transform: uppercase; */
+  transition: 0.5s;
+  background-size: 200% auto;
+  font-weight: bold;
+  color: grey;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-unavailable:hover {
+  border: none;
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  color: black;
+  text-decoration: none;
+}
+
+.banner {
+  font-size: 8em;
+  font-weight: bold;
+}
+
+.text-grad {
+  display: block;
+  background: #4272ee;
+  background: linear-gradient(to right, #4272ee 40%, #c97cfa 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner-secondary {
+  color: gray;
 }

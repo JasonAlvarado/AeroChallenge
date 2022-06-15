@@ -1,7 +1,6 @@
-import { Container, Grid } from "@material-ui/core";
-import Head from "next/head";
+import { Grid } from "@material-ui/core";
 import React from "react";
-import Card from "./Card";
+import ProductCard from "./ProductCard";
 import { IProduct } from "./types";
 
 const Products = ({ products }: { products: IProduct[] }) => {
@@ -15,7 +14,7 @@ const Products = ({ products }: { products: IProduct[] }) => {
       <Grid container spacing={4} id="products">
         {products &&
           products.map((product) => (
-            <Card product={product} key={product._id} />
+            <ProductCard product={product} key={product._id} />
           ))}
       </Grid>
     </div>
