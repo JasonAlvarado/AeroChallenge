@@ -16,8 +16,8 @@ const Header = () => {
         width="200px"
         onClick={() => window.scroll({ top: 0, behavior: "smooth" })}
       />
-      <UserCard />
       <DarkButton />
+      <UserCard />
     </Container>
   );
 };

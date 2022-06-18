@@ -15,7 +15,7 @@ const Home: NextPage<Props> = ({ products }) => {
     <ProvideUser>
       <Layout>
         <Hero />
-        {/* <Products products={products} /> */}
+        <Products products={products} />
       </Layout>
     </ProvideUser>
   );
