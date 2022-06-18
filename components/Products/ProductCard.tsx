@@ -38,14 +38,14 @@ const ProductCard = ({ product }: { product: IProduct }) => {
           boxShadow: "4px 5px 15px -9px #000000",
         }}
       >
-        <Toaster />
-        <div style={{ textAlign: "center" }}>
+        <div style={{ width: "100%", height: "100%", position: "relative" }}>
           <Image
-            src={img.url}
             alt={name}
+            src={img.url}
+            width="100%"
+            height="100%"
             layout="responsive"
-            width={500}
-            height={270}
+            objectFit="contain"
           />
         </div>
         <hr />
@@ -67,11 +67,7 @@ const ProductCard = ({ product }: { product: IProduct }) => {
           Redeem for {cost}
         </button>
       ) : (
-        <button
-          className="btn-unavailable"
-          style={{ width: "100%" }}
-          // onClick={handleRedeem}
-        >
+        <button className="btn-unavailable" style={{ width: "100%" }}>
           You need {cost - user?.points}
         </button>
       )}
