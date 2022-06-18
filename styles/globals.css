@@ -18,27 +18,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-/* html,
-body {
   padding: 0;
   margin: 0;
-  font-family: Montserrat, sans-serif;
-}
-
-body,
-body.light-theme {
-  --color-bg: #dddddd;
-  --color-text: #ee6352;
-}*/
-
-body.dark-theme {
-  --color-bg: rgb(53, 53, 53);
-  --color-text: wheat;
-}
-
-body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
 }

@@ -1,25 +1,21 @@
+import React from "react";
 import { Container } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
 import UserCard from "../User/UserCard";
-import styles from "../../styles/Dark.module.css";
+import DarkButton from "./DarkButton";
+import Image from "next/image";
+import aerolab_logo from "../../public/icons/aerolab-logo-1.svg";
 
 const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-
-  const changeMode = () => {
-    setIsDarkMode((currentIsDark) => !currentIsDark);
-  };
-
-  useEffect(() => {
-    document.body.classList.toggle("dark-theme");
-  }, [isDarkMode]);
-
   return (
     <Container>
-      <h1>aerolab</h1>
-      <button className="btn-gradient" onClick={changeMode}>
-        {isDarkMode ? <span>Light Mode</span> : <span>Dark Mode</span>}
-      </button>
+      <Image
+        alt="aerolab-logo"
+        height="100px"
+        src={aerolab_logo.src}
+        priority={true}
+        width="200px"
+        onClick={() => window.scroll({ top: 0, behavior: "smooth" })}
+      />
       <UserCard />
     </Container>
   );
