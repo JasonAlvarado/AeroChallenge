@@ -29,7 +29,7 @@ const UserCard = () => {
   return (
     <div
       style={{
-        width: "40%",
+        width: "100%",
         backgroundColor: "#252F3D",
         color: "white",
         borderRadius: "10px",
