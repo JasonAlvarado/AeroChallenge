@@ -6,7 +6,6 @@ const fetchUser = () => api.getUser();
 
 export const useUserInfo = () => {
   const { data, error } = useSWR("userProfile", fetchUser);
-  console.log("llegando al SWR");
 
   return {
     user: data as IUser,

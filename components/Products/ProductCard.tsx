@@ -11,13 +11,7 @@ const ProductCard = ({ product }: { product: IProduct }) => {
   const { _id: id, category, cost, createDate, img, name } = product;
 
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
-  const [isDisabled, setIsDisabled] = useState<boolean>(false);
   const { user } = useUser();
-
-  useEffect(() => {
-    const isDisabled = user?.points < cost;
-    setIsDisabled(isDisabled);
-  }, [user?.points, cost]);
 
   const handleRedeem = async () => {
     setIsProcessing(true);

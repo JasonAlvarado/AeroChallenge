@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;900&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  width: 100%;
+  background-color: #ffffff;
 }
 
 a {
@@ -14,77 +20,25 @@ a {
   box-sizing: border-box;
 }
 
-footer {
-  text-align: center;
-  color: gray;
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat, sans-serif;
 }
 
-.btn-grad {
-  background-image: linear-gradient(
-    to right,
-    #4776e6 0%,
-    #8e54e9 51%,
-    #4776e6 100%
-  );
-  font-weight: bold;
-  padding: 15px 45px;
-  text-align: center;
-  /* text-transform: uppercase; */
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  /* box-shadow: 0 0 20px #eee; */
-  border-radius: 10px;
-  display: block;
-  border: none;
+body,
+body.light-theme {
+  --color-bg: #dddddd;
+  --color-text: #ee6352;
+}*/
+
+body.dark-theme {
+  --color-bg: rgb(53, 53, 53);
+  --color-text: wheat;
 }
 
-.btn-grad:hover {
-  font-weight: bold;
-  cursor: pointer;
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-  border: none;
-}
-
-.btn-unavailable {
-  border: none;
-  cursor: not-allowed;
-  background-color: lightgrey;
-  padding: 15px 45px;
-  text-align: center;
-  /* text-transform: uppercase; */
-  transition: 0.5s;
-  background-size: 200% auto;
-  font-weight: bold;
-  color: grey;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-unavailable:hover {
-  border: none;
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  color: black;
-  text-decoration: none;
-}
-
-.banner {
-  font-size: 8em;
-  font-weight: bold;
-}
-
-.text-grad {
-  display: block;
-  background: #4272ee;
-  background: linear-gradient(to right, #4272ee 40%, #c97cfa 60%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.banner-secondary {
-  color: gray;
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }

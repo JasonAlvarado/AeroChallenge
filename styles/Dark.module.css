@@ -1,0 +1,9 @@
+body.dark-theme {
+  --color-bg: rgb(53, 53, 53);
+  --color-text: wheat;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
