@@ -1,6 +1,6 @@
 body.dark-theme {
-  --color-bg: rgb(53, 53, 53);
-  --color-text: wheat;
+  --color-bg: #3d4044;
+  --color-text: #ffffff;
 }
 
 body {
