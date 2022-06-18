@@ -12,10 +12,12 @@ const Aerocoins = () => {
 
   return (
     <div>
-      <p>{user?.points}</p>
+      <p>{error ? "error loading user" : user.points} </p>
+
       <button onClick={handleCardOpen}>
         {cardIsOpen ? <p>Close</p> : <p>Open</p>}
       </button>
+
       {cardIsOpen && <UserCard />}
     </div>
   );

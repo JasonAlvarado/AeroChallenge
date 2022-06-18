@@ -9,24 +9,16 @@ import Aerocoins from "./Aerocoins";
 const Header = () => {
   return (
     <Container>
-      <Grid container>
-        <Grid item>
-          <Image
-            alt="aerolab-logo"
-            height="100px"
-            src={aerolab_logo.src}
-            priority={true}
-            width="200px"
-            onClick={() => window.scroll({ top: 0, behavior: "smooth" })}
-          />
-        </Grid>
-        <Grid item>
-          <DarkButton />
-        </Grid>
-        <Grid item>
-          <Aerocoins />
-        </Grid>
-      </Grid>
+      <Image
+        alt="aerolab-logo"
+        height="100px"
+        src={aerolab_logo.src}
+        priority={true}
+        width="200px"
+        onClick={() => window.scroll({ top: 0, behavior: "smooth" })}
+      />
+      <DarkButton />
+      <Aerocoins />
     </Container>
   );
 };

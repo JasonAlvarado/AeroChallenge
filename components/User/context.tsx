@@ -6,7 +6,6 @@ import { UserContext } from "./types";
 
 const userContext = createContext({} as UserContext);
 
-// react 18 change
 interface Props {
   children?: React.ReactNode;
 }
@@ -27,13 +26,10 @@ function useProvideUser() {
   const handleAddPoints = async (amount: number) => {
     try {
       await api.addPoints(amount);
-
       mutate("userProfile");
-
       return true;
     } catch (e) {
       console.error(e);
-
       return false;
     }
   };

@@ -13,8 +13,6 @@ const UserCard = () => {
   const handleAddPointsClick = async () => {
     if (validPoints.includes(pointsToAdd)) {
       const response = await handleAddPoints(pointsToAdd);
-      // actualizar el nav con context de user
-      // setUser({ ...user, points: user.points + pointsToAdd });
 
       if (response) {
         toast.success("Points added");
